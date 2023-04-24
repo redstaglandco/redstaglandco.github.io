@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Coming Soon</title>
+    <title>My Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      /* Add your custom styles here */
       body {
-        font-family: sans-serif;
-        text-align: center;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
-      h1 {
-        margin-top: 50px;
-      }
-      p {
-        font-size: 24px;
-        margin-top: 20px;
+      svg {
+        width: 20vw;
+        height: 20vw;
+        max-width: 100%;
+        max-height: 100%;
       }
     </style>
   </head>
   <body>
-    <h1>Coming Soon</h1>
-    <p>We're working hard to bring you an amazing website. Stay tuned!</p>
+    <svg viewBox="0 0 100 100" id="my-svg">
+      <!-- This is a placeholder for the SVG content -->
+    </svg>
+    <script>
+      // Load the SVG file and replace the placeholder content
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://redstaglandco.github.io/Copy of Red Stag Land Co. Logo (1080 × 800 px).svg', true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+          const svgContent = xhr.responseText;
+          document.getElementById('my-svg').innerHTML = svgContent;
+        }
+      };
+      xhr.send();
+    </script>
   </body>
 </html>
