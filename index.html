@@ -14,7 +14,7 @@
         align-items: center;
         height: 100vh;
       }
-      svg {
+      img {
         width: 20vw;
         height: 20vw;
         max-width: 100%;
@@ -23,20 +23,8 @@
     </style>
   </head>
   <body>
-    <svg viewBox="0 0 100 100" id="my-svg">
-      <!-- This is a placeholder for the SVG content -->
-    </svg>
+    <img src = "https://redstaglandco.github.io/Copy of Red Stag Land Co. Logo (1080 × 800 px).svg" />
     <script>
-      // Load the SVG file and replace the placeholder content
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://redstaglandco.github.io/Copy of Red Stag Land Co. Logo (1080 × 800 px).svg', true);
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-          const svgContent = xhr.responseText;
-          document.getElementById('my-svg').innerHTML = svgContent;
-        }
-      };
-      xhr.send();
     </script>
   </body>
 </html>
